@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="sciencevikinglabs-reverseplugin" version="0.0.1">
+        <name>Reverse</name>
+        <description>Science Vikings Reverse String Plugin</description>
+        <license>MIT</license>
+        <keywords>reverse</keywords>
+        <js-module src="www/reverse.js" name="reverse">
+            <clobbers target="reverse" />
+        </js-module>
+        <platform name="android">
+
+            <config-file target="config.xml" parent="/*">
+                <feature name="Reverse">
+                    <param name="android-package" value="com.sciencevikinglabs.reverseplugin.ReversePlugin"/>
+                </feature>
+            </config-file>
+
+            <source-file src="src/android/ReversePlugin.java" target-dir="src/com/sciencevikinglabs/reverseplugin" />
+
+        </platform>
+    </plugin>

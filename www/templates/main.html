@@ -1,0 +1,15 @@
+<ion-view view-title="Reverse a String">
+  <ion-content>
+    <div class="card" ng-show="loading">
+      <h1>Loading</h1>
+    </div>
+    <div class="card" ng-hide="loading">
+      <input type="text" placeholder="String to reverse" ng-model="revStr.text"/>
+      <button class="button button-calm" ng-click="reverseIt()">Reverse it!</button>
+    </div>
+    <div class="card" ng-hide="loading">
+      <h1>Reversed String</h1>
+      <p>{{reversed}}</p>
+    </div>
+  </ion-content>
+</ion-view>
